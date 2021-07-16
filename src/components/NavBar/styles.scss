@@ -1,0 +1,29 @@
+@import "../../styles/global.scss";
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+
+  li a {
+    display: block;
+    color: #000;
+    padding: 1rem;
+    text-decoration: none;
+
+    &.active {
+      background-color: $blue;
+      color: white;
+    }
+
+    &:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+  }
+}

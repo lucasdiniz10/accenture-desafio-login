@@ -1,0 +1,58 @@
+$white: #ffffff;
+$white-bg: #f8f8f8;
+$white-line: #e2e2e2;
+$green: #04aa6d;
+$blue: #3f51b5;
+$red: #ed2939;
+$gray-800: #3f3b3b;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 720px) {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  color: #121214;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: 700;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Roboto", Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
