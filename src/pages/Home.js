@@ -1,10 +1,19 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { useLogin } from '../contexts/LoginProvider';
 
 import './home.scss';
 
 function Home() {
+  const {
+    email,
+    password,
+    setEmailState,
+    setPasswordState,
+    handleClickAuth
+  } = useLogin()
+
   return (
     <div className="homepage">
       <div className="welcome">
@@ -21,12 +30,14 @@ function Home() {
           <h2>Faça seu login</h2>
           <p>Preencha os dados corretamente.</p>
         </div>
-        <form onSubmit={() => { }}>
+        <form onSubmit={handleClickAuth}>
           <TextField
             id="outlined-basic"
             label="Email"
             type="email"
             variant="outlined"
+            value={email}
+            onChange={(e) => setEmailState(e.target.value)}
           />
           <TextField
             /* error
@@ -36,6 +47,8 @@ function Home() {
             type="password"
             autoComplete="current-password"
             variant="outlined"
+            value={password}
+            onChange={(e) => setPasswordState(e.target.value)}
           />
           <Button type="submit" variant="outlined" color="primary">
             Login
